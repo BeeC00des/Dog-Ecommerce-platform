@@ -3,18 +3,15 @@
     <section class="hero__section">
         <div class="container">
             <div class="hero__text">
-                <h4>Trade-in-offer</h4>
+                <h4>Buy-in-offer</h4>
                 <h1>Super value deals</h1>
-                <h2>On all products</h2>
-                <p>Save more with coupons & get up to 70% off!</p>
+                <h4>Save more with coupons & get up to 20% off!</h4>
                 <router-link to="/store">
-                    <action-button btnvalue="Start Shopping" />
+                    <action-button btnvalue="Check store" />
                 </router-link>
             </div>
         </div>
     </section>
-
-    <new-arrivals :newArrivals="newArrivals" />
 
     <main-footer/>
 </template>
@@ -42,22 +39,8 @@ export default {
         MainHeader,
         MainFooter
     },
-    computed: {
-        featuredProducts() {
-            return this.products.slice(1, 5);
-        },
-        newArrivals() {
-            return this.products.slice(5, 9);
-        },
-    },
-    async created() {
-        let res1 = await axios.get("https://gorana.onrender.com/products");
-        this.products = res1.data.results.map((product) => {
-            product.images[0] = product.images[0].replace("http", "https");
-            return product;
-        });
-        this.set_products(this.products);
-    },
+    
+   
 };
 </script>
 
@@ -65,7 +48,7 @@ export default {
 /* Hero Section */
 .hero__section {
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     height: calc(100vh - 75px);
     background-image: url("@/assets/images/dog-bg-plain.png");

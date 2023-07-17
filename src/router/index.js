@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import store from "@/store/store"
-import HomeView from "../views/user/DogShop";
+import HomeView from "../views/user/DogHome";
 const routes = [
   {
     path: "/",
@@ -16,7 +16,7 @@ const routes = [
   {
     path: "/store",
     name: "store",
-    component: () => import("../views/user/DogShop.vue"),
+    component: () => import("../views/user/DogStore.vue"),
   },
   {
     path: "/details",
