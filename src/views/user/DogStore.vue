@@ -1,6 +1,7 @@
 <template>
-    <section class="my-8 flex-1">
+    <section class="">
         <div class="container">
+            <main-header/>
             <form
                 class="flex flex-wrap items-center gap-6 mb-6"
                 @submit.prevent="searchDog"
@@ -38,7 +39,7 @@
                 <p class="mb-4 text-xl" v-show="dogs.length">
                     {{ searchResult }}
                 </p>
-                <dog-card :dogs="dogs" />
+                <dog-card :dogs="dogs"  class="px-12"/>
             </template>
             <template v-else>
                 <preloader v-if="loading" />
@@ -50,18 +51,21 @@
                 </div>
             </template>
         </div>
+        <main-footer/>
     </section>
 </template>
 
 <script>
 import { mapGetters, mapActions, mapState } from "vuex";
 import DogCard from "@/components/cards/DogCard.vue";
+import MainFooter from "@/components/sections/FooterSection.vue";
+import MainHeader from "@/components/sections/HeaderSection.vue";
 import Preloader from "@/components/preloaders/itemPreloader.vue";
 import axios from "axios";
 
 export default {
     name: "DogStore",
-    components: { DogCard, Preloader },
+    components: { DogCard, Preloader, MainFooter, MainHeader},
     data() {
         return {
             breed: "",

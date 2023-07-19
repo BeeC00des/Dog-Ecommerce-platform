@@ -1,8 +1,8 @@
 <template>
     <header>
         <div class="container">
-            <nav class="top__navigation">
-                <router-link to="/"><h3 class="logo">Doggy</h3></router-link>
+            <nav class="top__navigation px-12">
+                <router-link to="/"><h3 class="logo  text-4xl">Doggy</h3></router-link>
 
                 <div class="nav__links" :class="{ activeNav: showSideNav }">
                     <svg

@@ -1,8 +1,8 @@
 <template>
     <footer>
         <div class="container">
-            <div class="flex px-5 py-3">
-                <div class="w-3/12">
+            <div class="footer flex justify-between items-center px-10 py-8">
+                <div class="footer-col">
                     <h4 class="text-3xl font-extrabold">Contact</h4>
                     <span>
                         <strong>Address: </strong>562 Wellington Road, San
@@ -81,19 +81,21 @@
                     
                 </div>
                 <div class="footer-col">
-                    <h4>About store</h4>
+                    <h4 class="text-3xl font-extrabold">About store</h4>
                     <a href="#">About Us</a> 
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms & Conditions</a>
                 </div>
+
                 <div class="footer-col">
-                    <h4>My Account</h4>
+                    <h4 class="text-3xl font-extrabold">My Account</h4>
                     <a href="#">Sign In</a>
                     <a href="#">Order</a>
                     <a href="#">Support</a>
                 </div>
+
                 <div class="footer-col">
-                    <h4>Payment </h4>
+                    <h4 class="text-3xl font-extrabold">Payment </h4>
                     <span>Buy Dog with card</span>
                     <span>Secured Payment Gateways</span>
                     <div class="payment-methods">
@@ -106,6 +108,7 @@
                         <img src="@/assets/images/paysafe.svg" alt="paysafe" />
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>
