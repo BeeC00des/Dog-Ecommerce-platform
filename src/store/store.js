@@ -5,7 +5,9 @@ export default createStore({
         dogs: [],
         dog: [],
     },
+    
     mutations: {
+
         setDogs(state, payload) {
             state.dogs = payload;
         },
@@ -13,6 +15,7 @@ export default createStore({
             state.dog = state.dogs[payload];
         },
     },
+
     actions: {
         fetchDogs(context, payload) {
             context.commit("setDogs", payload);
@@ -27,6 +30,7 @@ export default createStore({
             context.commit("setDog", payload);
         },
     },
+
     getters: {
         getDogs: (state) => state.dogs,
     },

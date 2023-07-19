@@ -1,9 +1,9 @@
 <template>
     <footer>
         <div class="container">
-            <div class="footer">
-                <div class="footer-col">
-                    <h4>Contact</h4>
+            <div class="flex px-5 py-3">
+                <div class="w-3/12">
+                    <h4 class="text-3xl font-extrabold">Contact</h4>
                     <span>
                         <strong>Address: </strong>562 Wellington Road, San
                         Francisco
@@ -12,7 +12,7 @@
                         ><strong>Phone: </strong>+01-2222-675</span>
                   
                     <span>
-                        <div class="social-links">
+                        <div class="social-links flex">
                         <a href="#" aria-label="Facebook">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -124,13 +124,13 @@ export default {
 
 <style scoped>
 
-.footer {
+/* .footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     padding-block:3rem;
-}
+} */
 
 .footer-col {
     display: flex;

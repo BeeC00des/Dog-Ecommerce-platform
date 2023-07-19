@@ -1,12 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-// createApp(App).mount('#app')
-
-// import { createApp } from "vue";
-// import App from "./App.vue";
 import router from "./router";
 import store from "./store/store";
+
+import "./assets/style/main.css";
+
+
 // import the package
 import VueAwesomePaginate from "vue-awesome-paginate";
 
