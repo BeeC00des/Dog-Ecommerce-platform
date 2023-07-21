@@ -4,8 +4,8 @@
         <div class="container">
             <div class="hero__text pl-12">
                 <h4 class="text-2xl">Buy-in-offer</h4>
-                <h1 class="text-7xl">Super value deals</h1>
-                <h4 class="text-3xl">Save more with coupons & get up to 20% off!</h4>
+                <h1 class="text-6xl">Super value deals</h1>
+                <h4 class="text-2xl">Save more with coupons & get up to 20% off!</h4>
                 <router-link to="/store">
                     <action-button btnvalue="Check store" />
                 </router-link>

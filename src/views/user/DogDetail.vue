@@ -1,5 +1,5 @@
 <template>
-    <section class="my-8 flex-1">
+    <section class="">
         <div class="container">
             <router-link
                 to="/"
