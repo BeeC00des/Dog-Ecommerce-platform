@@ -18,21 +18,21 @@ const routes = [
     name: "store",
     component: () => import("../views/user/DogStore.vue"),
   },
-  {
-    path: "/details",
-    name: "details",
-    component: () => import("../views/user/DogDetail.vue"),
+  { 
+      path: "/dog/:id/:id2",
+      name: "Dog Detail",
+      component: () => import("../views/user/DogDetail.vue"),
   },
   {
     path: "/checkout",
     name: "checkout",
     component: () => import("../views/user/DogCheckout.vue"),
   },
-  {
-    path: "/cart/:id",
-    name: "cartitem",
-    component: () => import("../views/user/DogCart.vue"),
-  },
+  // {
+  //   path: "/cart/:id",
+  //   name: "cartitem",
+  //   component: () => import("../views/user/DogCart.vue"),
+  // },
 
 ];
 

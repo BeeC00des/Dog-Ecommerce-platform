@@ -11,7 +11,7 @@
                         </svg>
                     </div>
                     <input type="search" id="default-search"  v-model="breed" class="block w-full p-4 pl-10 text-xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for a dog by breed..." required>
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </div>
             </form>
             </div>
@@ -63,15 +63,17 @@ export default {
                 let response1 = await axios.get(
                     `https://dog.ceo/api/breed/${this.breed}/images/random/50`
                 );
-                let response2 = await axios.get(
-                    `https://dog.ceo/api/breed/${this.breed}/images/random/50`
-                );
+                // let response2 = await axios.get(
+                //     `https://dog.ceo/api/breed/${this.breed}/images/random/50`
+                // );
 
                 this.searchDogs(
-                    response1.data.message.concat(response2.data.message)
+                    response1.data.message
+                    // response1.data.message.concat(response2.data.message)
                 );
                 this.loading = false;
                 this.searchResult = `Search results for "${this.breed}": `;
+                
             } catch (error) {
                 this.loading = false;
                 console.log(error);
@@ -90,12 +92,12 @@ export default {
                 let response1 = await axios.get(
                     "https://dog.ceo/api/breeds/image/random/50"
                 );
-                let response2 = await axios.get(
-                    "https://dog.ceo/api/breeds/image/random/50"
-                );
-                const data = response1.data.message.concat(
-                    response2.data.message
-                );
+                // let response2 = await axios.get(
+                //     "https://dog.ceo/api/breeds/image/random/50"
+                // );
+                const data = response1.data.message;
+                
+                // .concat(response2.data.message);
                 this.fetchDogs(data);
                 this.loading = false;
             } catch (error) {

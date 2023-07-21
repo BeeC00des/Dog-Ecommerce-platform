@@ -33,5 +33,6 @@ export default createStore({
 
     getters: {
         getDogs: (state) => state.dogs,
+        // getDog: (state) => state.dog,
     },
 });
