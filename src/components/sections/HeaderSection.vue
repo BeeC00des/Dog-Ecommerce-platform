@@ -91,7 +91,7 @@
 
 <script>
 import { mapState, mapActions, mapGetters } from "vuex";
-import ActionButton from "../buttons/cta-btn.vue";
+import ActionButton from "../buttons/action-btn.vue";
 
 export default {
     components: { ActionButton },

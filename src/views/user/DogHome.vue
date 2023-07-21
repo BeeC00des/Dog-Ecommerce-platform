@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import ActionButton from "@/components/buttons/cta-btn.vue";
+import ActionButton from "@/components/buttons/action-btn.vue";
 import MainFooter from "@/components/sections/FooterSection.vue";
 import MainHeader from "@/components/sections/HeaderSection.vue";
 

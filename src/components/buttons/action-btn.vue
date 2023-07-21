@@ -1,7 +1,7 @@
 <template>
     <button aria-label="button" v-bind="$attrs">
         {{ btnvalue }}
-        <slot></slot>
+    <slot></slot>
     </button>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 button {
     border: none;
     background-color: var(--dim-blue);
-    padding: 10px 20px;
+    padding: 7px;
     border: 2px solid var(--dim-blue);
     font-size: 1.7rem;
     color: white;

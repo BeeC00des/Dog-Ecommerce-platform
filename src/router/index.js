@@ -28,11 +28,11 @@ const routes = [
     name: "checkout",
     component: () => import("../views/user/DogCheckout.vue"),
   },
-  // {
-  //   path: "/cart/:id",
-  //   name: "cartitem",
-  //   component: () => import("../views/user/DogCart.vue"),
-  // },
+  {
+    path: "/cart",
+    name: "cartitem",
+    component: () => import("../views/user/DogCart.vue"),
+  },
 
 ];
 

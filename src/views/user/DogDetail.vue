@@ -1,5 +1,6 @@
 <template>
-    <section class="my-8 flex-1">
+    <main-header/>
+    <section class="my-2 flex-1">
         <div class="container ">
             <div class="">
                 <section class="w-10/12 flex items-center justify-start mx-auto">
@@ -49,10 +50,15 @@
                             necessitatibus dolorem expedita, ab soluta
                         </p>
                         <div class="flex items-center justify-end">
-                            <button @click="cartoonifyImage"
-                            class="bg-green-800 text-2xl dark:bg-white dark:text-darkBlue text-white py-2 px-6 rounded-lg hover:ring-2 transition duration-100 font-semibold hover:ring-black hover:bg-transparent dark:hover:bg-transparent hover:text-black dark:hover:ring-white dark:hover:text-green">
-                        Purchase
-                            </button>
+                            <action-button
+                            btnvalue="Add To Cart"
+                            @click="addItemToCart"
+                        />
+                        <router-link to="/cart" @click="addItem"
+                        class="bg-green-800 text-2xl dark:bg-white dark:text-darkBlue text-white py-2 px-6 rounded hover:ring-2 transition duration-100 font-semibold hover:ring-black hover:bg-transparent dark:hover:bg-transparent hover:text-black dark:hover:ring-white dark:hover:text-green">
+                        purchase
+                    </router-link>
+                            
                         </div>
                     </div>
                 </div>
@@ -64,8 +70,12 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+import ActionButton from "@/components/buttons/action-btn.vue";
+import MainHeader from "@/components/sections/HeaderSection.vue";
 export default {
 
+    components: { ActionButton , MainHeader},
+    name: "DogDetail",
     methods: {
         ...mapActions(["getDog"]),
     },
