@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import store from "@/store/store"
+// import store from "@/store/store"
+
 import HomeView from "../views/user/DogHome";
 const routes = [
   {

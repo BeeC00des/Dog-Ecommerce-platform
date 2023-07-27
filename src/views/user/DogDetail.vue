@@ -12,8 +12,8 @@
             </div>
             <section class="w-10/12 flex items-start justify-center mx-auto">
                 <div class="w-4/12">
-                    <img class="h-5/6 rounded" :src="dog"
-                        :alt="dog.split('/')[4].charAt(0).toUpperCase() + dog.split('/')[4].slice(1)" />
+                    <img class="h-5/6 rounded" :src="dog" />
+                    <!-- :alt="dog.split('/')[4].charAt(0).toUpperCase() + dog.split('/')[4].slice(1)" -->
                     <!-- <p class="text-md font-medium mt-2">
                         Apply Image Effect:
                     </p> -->
@@ -50,15 +50,10 @@
                             necessitatibus dolorem expedita, ab soluta
                         </p>
                         <div class="flex items-center justify-end">
-                            <action-button
-                            btnvalue="Add To Cart"
-                            @click="addItemToCart"
-                        />
-                        <router-link to="/cart" @click="addItem"
-                        class="bg-green-800 text-2xl dark:bg-white dark:text-darkBlue text-white py-2 px-6 rounded hover:ring-2 transition duration-100 font-semibold hover:ring-black hover:bg-transparent dark:hover:bg-transparent hover:text-black dark:hover:ring-white dark:hover:text-green">
-                        purchase
-                    </router-link>
-                            
+                            <router-link to="/cart" @click="addItemToCart">
+                                <action-button
+                                btnvalue="Add To Cart"/>
+                            </router-link>
                         </div>
                     </div>
                 </div>
